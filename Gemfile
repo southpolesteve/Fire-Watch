@@ -8,6 +8,9 @@ gem 'rails', '3.0.7'
 gem 'pg'
 gem 'mechanize'
 gem 'nokogiri'
+gem 'annotate'
+gem 'geokit'
+gem 'gmaps4rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  incident_num: 1
+  type: MyString
+  location: MyString
+  station: MyString
+  unit: MyString
+  alarm: 2011-05-02 23:12:06
+  arrival: 2011-05-02 23:12:06
+  controlled: 2011-05-02 23:12:06
+
+two:
+  incident_num: 1
+  type: MyString
+  location: MyString
+  station: MyString
+  unit: MyString
+  alarm: 2011-05-02 23:12:06
+  arrival: 2011-05-02 23:12:06
+  controlled: 2011-05-02 23:12:06
