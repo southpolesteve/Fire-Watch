@@ -1,3 +1,27 @@
+GIT
+  remote: git://github.com/guard/guard-compass.git
+  revision: 5225ed7d878afe3923454aadee8d76116ec61e22
+  specs:
+    guard-compass (0.0.6)
+      compass (>= 0.10.5)
+      guard (>= 0.2.1)
+
+GIT
+  remote: git://github.com/guard/guard-livereload.git
+  revision: b0e40949e9c025373492d58d0058b127d720a9b4
+  specs:
+    guard-livereload (0.1.11)
+      em-websocket (~> 0.2.0)
+      guard (>= 0.2.2)
+      json (~> 1.5.1)
+
+GIT
+  remote: git://github.com/guard/guard.git
+  revision: f424854e61da2147e8c9d55b73310d012faaa913
+  specs:
+    guard (0.3.4)
+      thor (~> 0.14.6)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -28,16 +52,43 @@ GEM
       activemodel (= 3.0.7)
       activesupport (= 3.0.7)
     activesupport (3.0.7)
+    addressable (2.2.5)
     annotate (2.4.0)
+    annotate-models (1.0.4)
     arel (2.0.9)
     builder (2.1.2)
+    chunky_png (1.2.0)
+    compass (0.11.1)
+      chunky_png (~> 1.1)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    configuration (1.2.0)
     crack (0.1.8)
+    em-websocket (0.2.1)
+      addressable (>= 2.1.1)
+      eventmachine (>= 0.12.9)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    eventmachine (0.12.10)
+    flog (2.5.1)
+      ruby_parser (~> 2.0)
+      sexp_processor (~> 3.0)
+    fssm (0.2.7)
     geokit (1.5.0)
     gmaps4rails (0.8.0)
       crack
+    heroku (2.1.1)
+      launchy (>= 0.3.2)
+      rest-client (~> 1.6.1)
+      term-ansicolor (~> 1.0.5)
+    heroku_san (1.2.0)
+      heroku
+      rails (>= 2)
     i18n (0.5.0)
+    json (1.5.1)
+    launchy (0.4.0)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
     mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -46,7 +97,9 @@ GEM
     mechanize (1.0.0)
       nokogiri (>= 1.2.1)
     mime-types (1.16)
+    nifty-generators (0.4.6)
     nokogiri (1.4.4)
+    pacecar (1.4.5)
     pg (0.11.0)
     polyglot (0.3.1)
     rack (1.2.2)
@@ -68,6 +121,13 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
+    ruby_parser (2.0.6)
+      sexp_processor (~> 3.0)
+    sass (3.1.1)
+    sexp_processor (3.0.5)
+    term-ansicolor (1.0.5)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
@@ -78,9 +138,17 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  annotate-models
+  flog
   geokit
   gmaps4rails
+  guard!
+  guard-compass!
+  guard-livereload!
+  heroku_san
   mechanize
+  nifty-generators
   nokogiri
+  pacecar
   pg
   rails (= 3.0.7)

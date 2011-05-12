@@ -11,6 +11,18 @@ gem 'nokogiri'
 gem 'annotate'
 gem 'geokit'
 gem 'gmaps4rails'
+gem 'pacecar'
+
+group :development do
+  gem 'heroku_san'
+  gem 'annotate-models'
+  gem 'nifty-generators'
+  gem 'flog'
+  gem 'guard-livereload', :git => 'git://github.com/guard/guard-livereload.git'
+  gem 'guard-compass', :git => 'git://github.com/guard/guard-compass.git'
+  gem 'guard', :git => 'git://github.com/guard/guard.git'
+end
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

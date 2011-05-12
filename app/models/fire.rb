@@ -1,6 +1,16 @@
 class Fire < ActiveRecord::Base
 
-public
+  def total_call_time
+    ((controlled - alarm)/60)
+  end
+
+  def supression_time
+    ((controlled - arrival)/60)
+  end
+
+  def response_time
+    ((arrival - alarm)/60)
+  end
 
   def self.get_page(number)
     browser = Mechanize.new
