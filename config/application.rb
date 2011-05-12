@@ -38,5 +38,8 @@ module Firewatch
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    # DG - Added googlecharts gem
+    config.gem "googlecharts", :lib => "gchart"
   end
 end

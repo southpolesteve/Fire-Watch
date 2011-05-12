@@ -12,6 +12,10 @@ gem 'annotate'
 gem 'geokit'
 gem 'gmaps4rails'
 
+# Added by Dan Gordon:
+gem 'haml'
+gem 'googlecharts'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

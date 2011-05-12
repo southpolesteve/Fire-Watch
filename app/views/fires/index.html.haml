@@ -1,0 +1,20 @@
+%img{ :src => @chart}
+
+%table
+	%tr
+		%th Location
+		%th Station
+		%th Unit
+		%th Alarm
+		%th Arrival
+		%th Controlled
+		%th Fire Type
+	- @fires.each do |fire|
+		%tr
+			%td= fire.location
+			%td= fire.station
+			%td= fire.unit
+			%td= fire.alarm
+			%td= fire.arrival
+			%td= fire.controlled
+			%td= fire.fire_type
