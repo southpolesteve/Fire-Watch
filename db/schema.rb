@@ -12,19 +12,6 @@
 
 ActiveRecord::Schema.define(:version => 20110503044147) do
 
-  create_table "fire", :force => true do |t|
-    t.integer  "incident_num"
-    t.string   "type"
-    t.string   "location"
-    t.string   "station"
-    t.string   "unit"
-    t.datetime "alarm"
-    t.datetime "arrival"
-    t.datetime "controlled"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "fires", :force => true do |t|
     t.string   "location"
     t.string   "station"

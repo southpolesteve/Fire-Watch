@@ -22,7 +22,7 @@ Fire.destroy_all
     @fire.location = fire_page.xpath('//td[@headers="location"]').inner_html
     @fire.station = fire_page.xpath('//td[@headers="stations"]').inner_html
     @fire.unit = fire_page.xpath('//td[@headers="units"]').inner_html
-    @fire.url = 'http://www.cityofmadison.com/fire/reports/report.cfm?r=' + number.to_s
+    # @fire.url = 'http://www.cityofmadison.com/fire/reports/report.cfm?r=' + number.to_s
 
     if @fire.save
       puts "Saved fire number " + number.to_s
