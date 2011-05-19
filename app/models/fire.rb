@@ -11,6 +11,10 @@ public
   def self.parse_date(string)
     Time.strptime(string,'%m/%d/%Y %I:%M %p')
   end
-
+  
+  def self.fires_by_type
+    group('fire_type').order('count(fire_type) desc').limit(10).count
+  end
+  
 end
 
