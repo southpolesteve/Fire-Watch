@@ -14,7 +14,7 @@ gem 'gmaps4rails'
 
 # Added by Dan Gordon:
 gem 'haml'
-gem 'googlecharts'
+gem 'lazy_high_charts'
 
 # Use unicorn as the web server
 # gem 'unicorn'
