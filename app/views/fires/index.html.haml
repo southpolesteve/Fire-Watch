@@ -3,7 +3,10 @@
   Madison Fire Watch
 
 .span-10
-  %h2 This Week
+  %h2
+    = "This Week - "
+    = @fires_week.count
+    = " fires"
   .bar
 
   %h3
@@ -26,7 +29,10 @@
       %span.arrow-red
   %br
   %br
-  %h2 This Month
+  %h2
+    = "This Month - "
+    = @fires_month.count
+    = " fires"
   .bar
 
   %h3
@@ -50,7 +56,10 @@
 
   %br
   %br
-  %h2 All Time
+  %h2
+    = "All Time - "
+    = @fires_all.count
+    = " fires"
   .bar
 
   %h3

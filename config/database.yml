@@ -3,7 +3,7 @@ common: &COMMON
   encoding: unicode
   pool: 5
   username: rails
-  password:
+  password: rails
 
 development:
   <<: *COMMON
