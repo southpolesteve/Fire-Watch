@@ -14,6 +14,7 @@ gem 'gmaps4rails'
 gem 'pacecar'
 gem 'haml'
 gem 'git'
+gem 'taps'
 
 group :development do
   gem 'heroku_san'
