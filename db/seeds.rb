@@ -8,7 +8,7 @@
 
 Fire.destroy_all
 
-(1..566).each do |number|
+(1..590).each do |number|
 
   fire_page = Fire.get_page(number)
 
@@ -16,17 +16,25 @@ Fire.destroy_all
 
     @fire = Fire.new
     @fire.fire_type = fire_page.xpath('//th[@id="title"]/h2').inner_html
-    @fire.alarm = Fire.parse_date(fire_page.xpath('//td[@headers="alarmdatetime"]').inner_html)
-    @fire.arrival = Fire.parse_date(fire_page.xpath('//td[@headers="arrivaldatetime"]').inner_html)
-    @fire.controlled = Fire.parse_date(fire_page.xpath('//td[@headers="controlleddatetime"]').inner_html)
-    @fire.location = fire_page.xpath('//td[@headers="location"]').inner_html
+    @fire.alarm_at = Fire.parse_date(fire_page.xpath('//td[@headers="alarmdatetime"]').inner_html)
+    @fire.arrival_at = Fire.parse_date(fire_page.xpath('//td[@headers="arrivaldatetime"]').inner_html)
+    @fire.controlled_at = Fire.parse_date(fire_page.xpath('//td[@headers="controlleddatetime"]').inner_html)
+    @fire.location = fire_page.xpath('//td[@headers="location"]').inner_html + ", Madison, WI"
     @fire.station = fire_page.xpath('//td[@headers="stations"]').inner_html
     @fire.unit = fire_page.xpath('//td[@headers="units"]').inner_html
     @fire.url = 'http://www.cityofmadison.com/fire/reports/report.cfm?r=' + number.to_s
 
-    if @fire.save
-      puts "Saved fire number " + number.to_s
+    if (@fire.response_time)>=0 && (@fire.supression_time)>=0
+      if @fire.save
+        puts "Saved fire number " + number.to_s
+      else
+        puts "Fire " + number.to_s + " could not be saved"
+      end
+    else
+      puts "Fire " + number.to_s + " had times that were not chronological"
     end
+  else
+    puts "Fire Report " + number.to_s + " does not exist"
   end
 end
 

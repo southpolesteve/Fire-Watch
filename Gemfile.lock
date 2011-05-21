@@ -75,8 +75,10 @@ GEM
       sexp_processor (~> 3.0)
     fssm (0.2.7)
     geokit (1.5.0)
+    git (1.2.5)
     gmaps4rails (0.8.0)
       crack
+    haml (3.1.1)
     heroku (2.1.1)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
@@ -139,12 +141,15 @@ PLATFORMS
 DEPENDENCIES
   annotate
   annotate-models
+  compass
   flog
   geokit
+  git
   gmaps4rails
   guard!
   guard-compass!
   guard-livereload!
+  haml
   heroku_san
   mechanize
   nifty-generators

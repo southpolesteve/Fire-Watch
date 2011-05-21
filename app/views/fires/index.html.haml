@@ -1,0 +1,69 @@
+%br
+%h1
+  Madison Fire Watch
+
+.span-10
+  %h2 This Week
+  .bar
+
+  %h3
+    = "Average Response: "
+    %span.big
+      = (@fires_week.map(&:response_time).sum/@fires_week.map(&:response_time).size).round(2)
+    = " minutes"
+    - if (@fires_week.map(&:response_time).sum/@fires_week.map(&:response_time).size)<(@fires_all.map(&:response_time).sum/@fires_all.map(&:response_time).size)
+      %span.arrow-green
+    - else
+      %span.arrow-red
+  %h3
+    = "Average Supression: "
+    %span.big
+      = (@fires_week.map(&:supression_time).sum/@fires_week.map(&:supression_time).size).round(2)
+    = " minutes"
+    - if (@fires_week.map(&:supression_time).sum/@fires_week.map(&:supression_time).size)<(@fires_all.map(&:supression_time).sum/@fires_all.map(&:supression_time).size)
+      %span.arrow-green
+    - else
+      %span.arrow-red
+  %br
+  %br
+  %h2 This Month
+  .bar
+
+  %h3
+    = "Average Response: "
+    %span.big
+      = (@fires_month.map(&:response_time).sum/@fires_month.map(&:response_time).size).round(2)
+    = " minutes"
+    - if (@fires_month.map(&:response_time).sum/@fires_month.map(&:response_time).size)<(@fires_all.map(&:response_time).sum/@fires_all.map(&:response_time).size)
+      %span.arrow-green
+    - else
+      %span.arrow-red
+  %h3
+    = "Average Supression: "
+    %span.big
+      = (@fires_month.map(&:supression_time).sum/@fires_month.map(&:supression_time).size).round(2)
+    = " minutes"
+    - if (@fires_month.map(&:supression_time).sum/@fires_month.map(&:supression_time).size).round(2)<(@fires_all.map(&:supression_time).sum/@fires_all.map(&:supression_time).size).round(2)
+      %span.arrow-green
+    - else
+      %span.arrow-red
+
+  %br
+  %br
+  %h2 All Time
+  .bar
+
+  %h3
+    = "Average Response: "
+    %span.big
+      = (@fires_all.map(&:response_time).sum/@fires_all.map(&:response_time).size).round(2)
+    = " minutes"
+  %h3
+    = "Average Supression: "
+    %span.big
+      = (@fires_all.map(&:supression_time).sum/@fires_all.map(&:supression_time).size).round(2)
+    = " minutes"
+
+.span-14.last
+  = gmaps4rails @fires_week.to_gmaps4rails
+

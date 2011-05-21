@@ -1,0 +1,73 @@
+/* line 1, ../../app/stylesheets/style.sass */
+body {
+  background-color: #2e2e2d;
+  color: white;
+}
+
+/* line 5, ../../app/stylesheets/style.sass */
+h1 {
+  color: #ff831e;
+}
+
+/* line 8, ../../app/stylesheets/style.sass */
+h2, h3 {
+  color: white;
+}
+
+/* line 11, ../../app/stylesheets/style.sass */
+h2 {
+  margin-bottom: 3px;
+  margin-top: 0px;
+}
+
+/* line 15, ../../app/stylesheets/style.sass */
+.bar {
+  background-color: white;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/* line 21, ../../app/stylesheets/style.sass */
+#gmaps4rails_map {
+  width: 600px;
+  height: 540px;
+  margin-left: 10px;
+}
+
+/* line 26, ../../app/stylesheets/style.sass */
+.arrow-green, .arrow-red {
+  border-style: dashed;
+  border-color: transparent;
+  border-width: 0.53em;
+  display: -moz-inline-box;
+  display: inline-block;
+  font-size: 12px;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: middle;
+  width: 0;
+  top: -6px;
+}
+
+/* line 40, ../../app/stylesheets/style.sass */
+.arrow-red {
+  border-bottom-width: 1em;
+  border-bottom-style: solid;
+  border-bottom-color: red;
+  bottom: 0.25em;
+}
+
+/* line 46, ../../app/stylesheets/style.sass */
+.arrow-green {
+  border-top-width: 1em;
+  border-top-style: solid;
+  border-top-color: green;
+  top: 0.25em;
+}
+
+/* line 52, ../../app/stylesheets/style.sass */
+.big {
+  font-size: 200%;
+}

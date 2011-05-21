@@ -12,6 +12,8 @@ gem 'annotate'
 gem 'geokit'
 gem 'gmaps4rails'
 gem 'pacecar'
+gem 'haml'
+gem 'git'
 
 group :development do
   gem 'heroku_san'
@@ -21,6 +23,7 @@ group :development do
   gem 'guard-livereload', :git => 'git://github.com/guard/guard-livereload.git'
   gem 'guard-compass', :git => 'git://github.com/guard/guard-compass.git'
   gem 'guard', :git => 'git://github.com/guard/guard.git'
+  gem 'compass'
 end
 
 

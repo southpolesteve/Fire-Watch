@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110503044147) do
+ActiveRecord::Schema.define(:version => 20110521062428) do
 
   create_table "fire", :force => true do |t|
     t.integer  "incident_num"
@@ -29,12 +29,16 @@ ActiveRecord::Schema.define(:version => 20110503044147) do
     t.string   "location"
     t.string   "station"
     t.string   "unit"
-    t.datetime "alarm"
-    t.datetime "arrival"
-    t.datetime "controlled"
+    t.datetime "alarm_at"
+    t.datetime "arrival_at"
+    t.datetime "controlled_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "fire_type"
+    t.string   "url"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "gmaps"
   end
 
 end
