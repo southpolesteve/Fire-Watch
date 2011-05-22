@@ -30,7 +30,7 @@ h2 {
 
 /* line 21, ../../app/stylesheets/style.sass */
 #gmaps4rails_map {
-  width: 600px;
+  width: 540px;
   height: 540px;
   margin-left: 10px;
 }
